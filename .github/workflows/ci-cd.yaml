@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   build:
-    runs-on: [Repository, self-hosted, Linux, X64]
+    runs-on: [self-hosted, Linux, X64]
     steps:
       - uses: actions/checkout@v2
       - name: Log in to Docker Hub

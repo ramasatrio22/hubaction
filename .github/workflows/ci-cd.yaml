@@ -25,3 +25,4 @@ jobs:
           else
            docker build -t server /var/lib/jenkins/workspace/devops
            docker run --name server -d -p 9090:80 server
+          fi

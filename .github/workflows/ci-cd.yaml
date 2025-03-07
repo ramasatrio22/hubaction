@@ -19,7 +19,7 @@ jobs:
           container_id=$(docker ps --filter "status=running" --format "{{.ID}} {{.Image}}" | grep server | cut -d " " -f 1)
           
           if [ -n "$container_id" ]; then
-           docker cp /var/lib/jenkins/workspace/devops/. "$container_id":/usr/share/nginx/html
+           docker cp /root/actions-runner/_work/hubaction/hubaction/. "$container_id":/usr/share/nginx/html
            docker stop $container_id
            docker start server
           else

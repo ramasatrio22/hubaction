@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: localhost
     steps:
     - uses: actions/checkout@v2
     - name: Log in to Docker Hub
